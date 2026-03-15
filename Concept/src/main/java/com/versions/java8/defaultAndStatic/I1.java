@@ -1,0 +1,6 @@
+package com.versions.java8.defaultAndStatic;
+
+public interface I1 {
+
+    public void method();
+}
