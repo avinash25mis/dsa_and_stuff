@@ -8,6 +8,13 @@ import java.util.Arrays;
 public class HeapSort {
 
 
+    public static void main(String[] args) {
+        int [] arr={7,4,5,7,1,2,3};
+        System.out.println(Arrays.toString(arr));
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
     static void  heapify(int arr[], int n, int i)
     {
         int largest = i; // Initialize largest as root
@@ -55,10 +62,4 @@ public class HeapSort {
         }
     }
 
-    public static void main(String[] args) {
-        int [] arr={7,4,5,7,1,2,3};
-        System.out.println(Arrays.toString(arr));
-        sort(arr);
-        System.out.println(Arrays.toString(arr));
-    }
 }

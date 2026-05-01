@@ -7,6 +7,12 @@ import java.util.Arrays;
  */
 public class BubbleSort {
 
+    public static void main(String[] args) {
+        int [] arr={7,4,5,7,1,2,3};
+        System.out.println(Arrays.toString(arr));
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 
     public static void sort(int arr[]){
 
@@ -20,18 +26,14 @@ public class BubbleSort {
                  arr[j+1] = temp;
 
                 }
-                /*after every inner iteration we put the maxel element at end
+                /*after every inner iteration we put the max element at end
                 so next time we iterrate till one less   arr.length-i * */
             }
+            System.out.println();
         }
-        System.out.println();
+
     }
 
 
-    public static void main(String[] args) {
-        int [] arr={7,4,5,7,1,2,3};
-        System.out.println(Arrays.toString(arr));
-        sort(arr);
-        System.out.println(Arrays.toString(arr));
-    }
+
 }

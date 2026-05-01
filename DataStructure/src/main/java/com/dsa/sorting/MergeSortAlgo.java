@@ -7,6 +7,13 @@ import java.util.Arrays;
  */
 public class MergeSortAlgo {
 
+    public static void main(String[] args) {
+        int [] arr={7,4,5,7,1,2,3};
+        System.out.println(Arrays.toString(arr));
+        mergeSort(arr,arr.length);
+        System.out.println(Arrays.toString(arr));
+    }
+
 
     public static void mergeSort(int arr[],int n){
        if(n<2){
@@ -62,10 +69,5 @@ public class MergeSortAlgo {
 
 
 
-    public static void main(String[] args) {
-        int [] arr={7,4,5,7,1,2,3};
-        System.out.println(Arrays.toString(arr));
-        mergeSort(arr,arr.length);
-        System.out.println(Arrays.toString(arr));
-    }
+
 }
