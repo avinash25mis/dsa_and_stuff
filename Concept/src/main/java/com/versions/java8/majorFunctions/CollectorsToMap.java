@@ -1,6 +1,6 @@
 package com.versions.java8.majorFunctions;
 
-import com.versions.java8.common.DataForStream;
+import com.versions.java8.common.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,19 +24,19 @@ public class CollectorsToMap {
     }
 
     private static void toMapOperation() {
-        List<DataForStream> list= new ArrayList<>();
-       list = DataForStream.getEmployeeList();
+        List<Employee> list= new ArrayList<>();
+       list = Employee.getEmployeeList();
 
-        Map<Integer, DataForStream> collect = list.stream().collect(Collectors.toMap(e -> e.getId(), Function.identity()));
+        Map<Integer, Employee> collect = list.stream().collect(Collectors.toMap(e -> e.getId(), Function.identity()));
         System.out.println(collect);
 
         Map<Integer, String> collect1 = list.stream().collect(Collectors.toMap(e -> e.getId(), e -> e.getName()));
         System.out.println(collect1);
 
-        Map<DataForStream, String> collect2 = list.stream().collect(Collectors.toMap(e -> e, e -> e.getName()));
+        Map<Employee, String> collect2 = list.stream().collect(Collectors.toMap(e -> e, e -> e.getName()));
         System.out.println(collect2);   //e->e is similar to Function.Identity
 
-        Map<Integer, String> collect3 = list.stream().collect(Collectors.toMap(DataForStream::getId, DataForStream::getName));
+        Map<Integer, String> collect3 = list.stream().collect(Collectors.toMap(Employee::getId, Employee::getName));
         System.out.println(collect3);
     }
 }
